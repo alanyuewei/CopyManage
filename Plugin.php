@@ -80,7 +80,7 @@ class CopyManage_Plugin implements Typecho_Plugin_Interface
         $return .= 'var copy_text = e.srcElement?e.srcElement.innerHTML:e.target.innerHTML;';
         $return .= 'copy_text += "\r\n------------\r\n'. $get_form->info .'";';
         if($get_form->url_status){
-            $return .= 'copy_text += "\r\n原文链接："+location.host;';
+            $return .= 'copy_text += "\r\n原文链接："+location.href;';
         }
         $return .= 'e.preventDefault();';
         $return .= 'e.clipboardData.setData("text",copy_text);';
