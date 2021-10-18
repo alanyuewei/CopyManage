@@ -84,7 +84,7 @@ class CopyManage_Plugin implements Typecho_Plugin_Interface
         }
         $return .= 'e.preventDefault();';
         $return .= 'e.clipboardData.setData("text",copy_text);';
-        $return .= 'layer.msg("复制成功！若要转载请务必保留出处！",function (){});';
+        $return .= 'layer.msg("'.$get_form->info.'",function (){});';
         $return .= '}';
         $return .= '</script>';
 
